@@ -1,0 +1,305 @@
+\documentclass[10pt,a4paper]{article}
+	\usepackage[utf8]{inputenc}
+	\usepackage{amsmath}
+	\usepackage{amsfonts}
+	\usepackage{amssymb}
+	
+	\setcounter{secnumdepth}{1}
+	
+	\newcommand{\question}[1]{\bigskip \noindent \textbf{Question #1.}}
+\begin{document}
+
+\section{Mathematics}
+\question{1} $\sum_{i=2}^6 i = 2 + 3 + 4 + 5 + 6 = 20$. Alternatively, we could use this formula:
+\begin{equation*}
+\sum_{i=1}^n i = \frac{n(n+1)}{2}
+\end{equation*}
+$\sum_{i=2}^6 i = \left(\sum_{i=1}^6 i\right) - 1 = \frac{6 \times 7}{2} - 1 = 20	$
+
+\question{2} $\prod_{i=2}^5 i = 2 \times 3 \times 4 \times 5 = 120$
+
+\question{3} $\prod_{i=1}^5 2^i = 2^1 \times 2^2 \times 2^3 \times 2^4 \times 2^5 = 2^{1 + 2 + 3 + 4 + 5} = 2^{15} = 32768$. 
+
+\question{4}  floor(x) = $\lfloor x\rfloor$ is the largest integer not greater than x and ceiling(x) = $\lceil x \rceil$ is the smallest integer not less than x. So $\lceil 5.4 \rceil$ = 6.
+
+\question{5} $\log_2{2^k 4^m} = \log_2{2^k} + \log_2{4^m} = k \log_2{2} + m \log_2{4} = k + 2m$.
+
+\section{Combinatorics}
+\question{6} Every handshake requires two individuals. So the total number of handshakes is equal to the number of ways that we could pick 2 individuals from a group of 15:
+\begin{equation*}
+\binom{15}{2} = \frac{15!}{(15 - 2)! \cdot 2!} = 105
+\end{equation*}
+
+\question{7} The possible ways to rank these ten answers are equal to the number of permutations of 10 objects, which is $10! = 3628800$.
+
+\question{8} Each subset of $\{1 , \ldots , 100\}$ which does not contain an even number is a subset of $\{1, 3, 5, \ldots , 97, 99\}$. So it would suffice to count the number of subsets of $\{1, 3, 5, \ldots , 97, 99\}$. We know that a set containing $n$ elements has $2^n$ subsets (including the empty subset). So the answer is $2^{50}$.
+
+\question{9} The order is not important, hence the answer is
+\begin{equation*}
+\binom{10}{3} = \frac{10!}{(10-3)! \cdot 3!} = 120
+\end{equation*}
+
+\section{Probability}
+
+\question{10} Let's show each outcome with an ordered pair (in which the first element shows the number of first ball and the second element shows the number of the second ball). All possible outcomes are listed below (The outcomes with a sum of 7 are specified with boldface):
+\begin{equation*}
+\begin{matrix}
+(1,1) & (2,1) & (3,1) & (4,1) & (5,1) & \textbf{(6,1)} \\
+(1,2) & (2,2) & (3,2) & (4,2) & \textbf{(5,2)} & (6,2) \\
+(1,3) & (2,3) & (3,3) & \textbf{(4,3)} & (5,3) & (6,3) \\
+(1,4) & (2,4) & \textbf{(3,4)} & (4,4) & (5,4) & (6,4)
+\end{matrix}
+\end{equation*}
+\begin{equation*}
+Pr (\text{sum = 7}) = \frac{N(\text{sum = 7})}{N(\text{total})} = \frac{4}{24} = \frac{1}{6}
+\end{equation*}
+
+\question{11} Using Bayes rule, we have:
+\begin{align*}
+Pr (\text{box B} | \text{black}) &= \frac{Pr(\text{black} | \text{box B}) Pr(\text{box B})}{Pr(\text{black} | \text{box B}) Pr(\text{box B}) + Pr(\text{black} | \text{box A}) Pr(\text{box A})} \\
+&=\frac{(\frac{3}{6}) \times (\frac{1}{2})}{(\frac{3}{6}) \times (\frac{1}{2}) + (\frac{2}{7}) \times (\frac{1}{2})} = \frac{7}{11}
+\end{align*}
+
+\question{12} Using Bayes rule,
+\begin{align*}
+Pr (\text{via C} | \text{delayed}) &= \frac{Pr(\text{delayed} | \text{via C}) Pr(\text{via C})}{Pr(\text{delayed} | \text{via C}) Pr(\text{via C}) + Pr(\text{delayed} | \text{via D}) Pr(\text{via D})} \\
+& = \frac{(0.1)(0.3)}{(0.1)(0.3) + (0.05)(0.7)} = \frac{6}{13}
+\end{align*}
+
+\question{13} Rolling two dice has 36 possible outcomes. Outcomes with a total smaller than 9 are listed below. Among these outcomes, those with an even sum are specified by boldface:
+\begin{equation*}
+\begin{matrix}
+\textbf{(1,1)} & (1,2) & \textbf{(1,3)} & (1,4) & \textbf{(1,5)} & (1,6) \\
+(2,1) & \textbf{(2,2)} & (2,3) & \textbf{(2,4)} & (2,5) & \textbf{(2,6)} \\
+\textbf{(3,1)} & (3,2) & \textbf{(3,3)} & (3,4) & \textbf{(3,5)} && \\
+(4,1) & \textbf{(4,2)} & (4,3) & \textbf{(4,4)} &&& \\
+\textbf{(5,1)} & (5,2) & \textbf{(5,3)} &&&& \\
+(6,1) & \textbf{(6,2)}
+\end{matrix}
+\end{equation*}
+Using Bayes rule,
+\begin{equation*}
+Pr (\text{less than 9} | \text{even}) = \frac{Pr(\text{less than 9}, \text{even})}{Pr(\text{even})} = \frac{(\frac{14}{36})}{(\frac{18}{36})} = \frac{7}{9}
+\end{equation*}
+
+\question{14} The expected payout of three tickets is equal to the sum of expected payout of each of three tickets. 
+\begin{equation*}
+E[X_1 + X_2 + X_3] = E[X_1] + E[X_2] + E[X_3] = 3 \times E[X]
+\end{equation*}
+
+\begin{equation*}
+E[X] = -5 + \left(Pr(X = 100) \times (100) + Pr(X = 0) \times (0)\right) = -5 + 0.02 \times 100 = -3
+\end{equation*}
+Hence the expected payout of three tickets would be $3 \times -3 = -9$.
+
+\section{Statistics}
+
+\question{15} \\
+1. incorrect \\
+2. incorrect \\
+3. incorrect \\
+4. correct \\
+
+\question{16} \\
+1. incorrect \\
+2. incorrect \\
+3. incorrect \\
+4. correct \\
+
+\section{Algebra}
+
+\question{17} Multiplying the first equation by 3 and the second one by 2, we'll get the following equivalent system:
+\begin{alignat*}{2}
+ -6  x_1  + 12  x_2 & = -18 \\
+ 6  x_1  - 18  x_2 & = 24
+\end{alignat*}
+By summing these two equations we'll get $x_2 = -1$, and by replacing this value for $x_2$ in any of the equations, we'll obtain $x_1 = 1$.
+
+\question{18} This is the formula for multiplication of two matrices $A_{m \times n}$ and $B_{n \times p}$:
+\begin{equation*}
+    (AB)_{ij} = \sum_{k=1}^n A_{ik}B_{kj}. 
+\end{equation*}
+Using this formula, we could compute the multiplication of the two given matrices:
+\begin{equation*}
+\begin{pmatrix}
+8 & 12 & 7 \\
+21 & 33 & 18 \\
+28 & 36 & 26
+\end{pmatrix}
+\end{equation*}
+
+\question{19} 1. The output of algorithm would be the array $ [3 \quad 5 \quad 7 \quad 9] $.
+
+2. This algorithm sorts the input array using a technique called bubble sort.
+
+3. The number of iterations of the inner loop starts with value 9 and gradually decreases to 1. So the total number of comparisons is $ 9 + 8 + \ldots + 2 + 1 = 45$.
+
+4. For an array of length $n$, the number of iterations of inner loop starts with value $n-1$ and gradually decreases to 1. So the total number of iterations would be $(n-1) + (n-2) + \ldots + 1 = \frac{n(n-1)}{2}$. This indicates that the running time of this algorithm is of $\Theta(n^2)$.
+
+\question{20} Having a sorted binary tree, we know that the following property holds:
+
+\emph{If y is a node in the left subtree of x, then y.key < x.key. If y is a node in the right subtree of x, then y.key $>$ x.key}
+
+This means that in order to 	decide whether an element occurs in the tree (i.e. searching the tree) we only have to check at most as many nodes as the number of depth levels of the tree. Hence the answer to this question is at most $m+1$ (note that the depth of root node is assumed to be zero). 
+
+\question{21} The maximal number of nodes at depth-level $d$ of a binary tree is $2^d$. So the answer to this question is $2^4 = 16$. 
+
+\question{22}
+\begin{equation*}
+5 \log_2^n \prec 3n \prec 7.5 n \log_2{n} \prec 6n^2 \prec n^7 \prec 2^n \prec 8n!
+\end{equation*}
+
+\section{Boolean Logic}
+
+\question{23} \\
+1. correct \\
+2. correct \\
+3. correct \\
+4. correct \\
+5. incorrect \\
+6. correct 
+
+\question{24} (A and B).
+
+\question{25} Yes. Assigning the value \emph{true} to variable \emph{A} and any value to other variables makes this expression true. 
+
+\section{Set Theory}
+
+\question{26} \\
+1. AT \\
+2. AT \\
+3. ?
+
+\question{27} \\
+1. correct \\
+2. correct \\
+3. correct \\
+4. incorrect \\
+5. correct
+
+\question{28} 
+\begin{equation*}
+(A \cap B) \cup (A \cap B') = A \cap (B \cup B') = A \cap \mathbb{U} = A
+\end{equation*}
+
+\question{29}
+Let us denote the set of students taking courses Algebra, Physics, and Statistics by letters $A$, $P$, and $S$, respectively. We have this information about cardinality of these three sets:
+
+\begin{equation*}
+	\begin{array}{lll}
+	 |A| = 329							& |P| = 186				& |S| = 295 \\
+	 |A \cap P| = 83				& |A \cap S| = 217	& |P \cap S| = 63 \\
+	 |A \cup P \cup S| = 500	& &
+	\end{array}
+\end{equation*}
+
+According to the principle of inclusion-exclusion, for three sets A, P and S we have:
+\begin{align*}
+|A \cup P \cup S| &= |A| + |P| + |S| - |A \cap P| - |A \cap S| - |P \cap S| + |A \cap P \cap S|\\
+|A \cap P \cap S| &= 500 - 329 - 186 - 295 + 83 + 217 + 63 = 53
+\end{align*}
+
+\section{Calculus}
+
+\question{30} 
+\begin{equation*}
+f(x) = 5x^2 + 3x \Rightarrow f'(x) = 10 x + 3 \Rightarrow f'(4) = 43
+\end{equation*}
+
+\question{31}
+\begin{equation*}
+f(5) = \int_1^5 3t dt = \left. \frac{3t^2}{2} \right|_1^5 = \frac{72}{2} = 36
+\end{equation*}
+\section{Linear Algebra}
+
+\question{32} True. The dot product of two vectors could be expressed in term of their lengths and the angle between the two vectors:
+\begin{equation*}
+a . b = |a| |b| \cos \theta
+\end{equation*}
+Since the two vectors are assumed to be of unit length, their dot product is simply the cosine of the angle between them. As this angle increases from 0 to 90 degrees, the cosine decreases from one to zero. 
+
+\question{33} True. Since the lengths of two vectors are always non-negative, a negative dot product indicates an angle with negative cosine. The range of angles with a negative cosine are those between 90 and 270 degrees.
+
+\question{34} Suppose that matrix $M$ contains these entries:
+\begin{center}
+\begin{equation*}
+M =
+\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22}
+\end{bmatrix}
+\end{equation*}
+\end{center}
+
+Since we have $M u^T = u'^T$:
+\begin{align*}
+&\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22}
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}
+= 
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix} \\
+\\
+& m_{11} = 1 \\
+& m_{21} = 1
+\end{align*}
+
+Also from  $M v^T = v'^T$ we have:
+\begin{align*}
+&\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22}
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}
+= 
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix} \\
+\\
+& m_{11} + 2 m_{12} = 0 \\
+& m_{21} + 2 m_{22} = 1 \\
+\\
+&m_{12} = - \frac{1}{2} \\
+&m_{22} = 0
+\end{align*}
+
+So the transformation matrix is:
+\begin{center}
+\begin{equation*}
+M =
+\begin{bmatrix}
+1 & -\frac{1}{2} \\
+1 & 0
+\end{bmatrix}
+\end{equation*}
+\end{center}
+
+
+\section{Insight}
+
+\question{35} The maximal cliques are $\{X_1, X_2, X_3, X_4\}$ and $\{X_2, X_3, X_5\}$.
+
+\question{36}
+1. Yes. All three strings match the given expression:
+\begin{align*}
+&d \, \underline{a} \, t\\
+&d \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, t\\
+&d \, \underline{bc} \, \underline{a} \, \underline{bc} \, t
+\end{align*}
+
+2. Note that the only string starting with zero is zero itself:
+\begin{equation*}
+0 | \left(1(0|1)*\right)
+\end{equation*}
+\end{document}
