@@ -2,6 +2,7 @@
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{tikz}
 
 \title{Self test}
 
@@ -11,6 +12,15 @@ A self-evaluation for the University of Leuven's Masters of Artificial
 Intelligence program.
 \end{abstract}
 \maketitle
+
+% using tikz for drawing graphs
+\usetikzlibrary{arrows,positioning} 
+\usetikzlibrary{arrows,shapes,backgrounds,through,shadows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{calc}
+\tikzstyle{ugraph}=[line width=1.5pt]
+\tikzstyle{cont}=[circle, draw,% a shading that is white at the top...
+thick,minimum size=6mm,line width=1pt,>=stealth]  % continuous  node
 
 \subsection*{Mathematics}
 
@@ -367,7 +377,7 @@ If so, state one.
 \begin{solution}
 % TODO (Behrouz) This way of presenting the answer reveals the answer to the first part. Fix it!
 % TODO (Behrouz) This is not a correct specification of solution; as any assignment to B and C would be also valid. Is there a way to specify more than one correct answer?
-By assigning value \answer{true} to \emhp{A} and \answer{false} to \emph{B} and \answer{false} to \emph{C}, the equation evaluates to true.
+By assigning value \answer{true} to \emph{A} and \answer{false} to \emph{B} and \answer{false} to \emph{C}, the equation evaluates to true.
 \end{solution}
 \end{question}
 
@@ -469,10 +479,72 @@ Since the lengths of two vectors are always non-negative, a negative dot product
 
 % Question 34
 \begin{question}
-Given the vectors $u_1$, $v_1$, $u_2$ and $v_2$ as indicated in the figure, give a matrix $M$ that transforms $u_1$
-into $u_2$ and $v_1$ into $v_2$; that is, find $M$ such that $M u_1=u_2$ and $M v_1=v_2$.
+Given the vectors $u$ and $v$, give a matrix $M$ that transforms them into $u'$ and $v'$; that is, find $M$ such that $M u=u'$ and $M v=v'$.
 % TODO (Behrouz) the vectors in this image should be transposed
 % TODO (Behrouz) use pgfplots instead of including an image
 \includegraphics[width=0.6\textwidth]{fig.pdf}
 \end{question}
+
+
+\subsection*{Insight}
+
+% Question 35
+\begin{question}
+A clique is  a fully connected subset of nodes in a graph. 
+A maximal clique is a clique which is not a subset of a larger clique.
+Consider now the graph below, where the $X_i$ are the nodes.  What are the maximal cliques? 
+\begin{center}
+\scalebox{0.75}{
+\hskip1.4cm
+\begin{tikzpicture}[ugraph]
+%\node[font=\Large] at (1.2,2.8) {Undirected Graph};
+\node[cont] (x1) at (0,2) {$X_1$};
+\node[cont] (x2) at (2,2) {$X_2$};
+\node[cont] (x3) at (2,0) {$X_3$};
+\node[cont] (x4) at (0,0) {$X_4$};
+\node[cont] (x5) at (3,1) {$X_5$};
+\draw(x1) -- (x2);\draw(x1) -- (x3); \draw(x1) -- (x4);
+\draw(x2) -- (x3); \draw(x2) -- (x4);
+\draw(x3) -- (x4); \draw(x2)--(x5);\draw(x3)--(x5);
+\end{tikzpicture}}
+\end{center}
+
+% TODO (Behrouz) Find out how to present the solution. The natural way to do so would be to have a two-part question with the second depending on the solution of first. Is that possible to do in ximera?
+
+% TODO (Behrouz) The solution is an unordered set. Could that be specified in ximera?
+
+\begin{solution}
+The cliques are \answer {($X_1$,$X_2$,$X_3$,$X_4$) and ($X_2$,$X_3$,$X_4$)}.
+\end{solution}
+\end{question}
+
+% Question 36
+\begin{question}
+Consider the following definitions.  
+A vertical bar separates alternatives. For instance, $gray  \mid grey$ defines the set \{$gray$, $grey$\}.
+Parentheses are used to define the scope and precedence of the operators (among other uses). For example, $gray \mid grey$ and $gr(a\mid e)y$ are equivalent patterns which both describe the set 
+ \{$gray$, $grey$\}.
+The quantifier $^*$ denotes that the previous element may be repeated zero or more times. 
+ For example, $ab^*c$ includes $ac$, $abc$, $abbc$, $abbbc$, and so on.
+
+Does the set $d (a \mid bc)^*t  $ include $dat$, $daaaaat$, $dbcabct$ ?  
+
+\begin{solution}
+The answser is \answer{yes}.
+ 
+All three strings match the given expression:
+\begin{align*}
+&d \, \underline{a} \, t\\
+&d \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, t\\
+&d \, \underline{bc} \, \underline{a} \, \underline{bc} \, t
+\end{align*}
+\end{solution}
+
+How would you define the set of all binary representations of natural numbers (i.e., 0, 1, 10, 11, ... ) ?
+
+\begin{solution}
+The answer is \answer{$0 | (1(0|1)*)$}.
+\end{solution}
+\end{question}
+
 \end{document}
