@@ -1,0 +1,64 @@
+\documentclass{ximera}
+
+\title{Mathematics}
+
+\begin{document}
+\begin{abstract}
+Something....
+\end{abstract}
+\maketitle
+
+% Question 1
+\begin{question}
+What is the result of $\sum_{i=2}^6 i$?
+\begin{solution}
+The sum is equal to \answer{20}.
+\end{solution}
+This sum could be computed via
+\[
+\sum_{i=2}^6 i = 2 + 3 + 4 + 5 + 6,
+\]
+or by using the formula
+\[
+\sum_{i=1}^n i = \frac{n(n+1)}{2}.
+\]
+\end{question}
+
+% Question 2
+\begin{question}
+What is  the result of $\prod_{i=2}^{5} i$ ? 
+\begin{solution}
+The product is equal to \answer{120}.
+\end{solution}
+$\prod_{i=2}^5 i = 2 \times 3 \times 4 \times 5 = 120$
+\end{question}
+
+% Question 3
+\begin{question}
+What is  the result of  $\prod_{i=1}^5 2^i$  ? 
+\begin{solution}
+The product is equal to \answer{32768}.
+\end{solution}
+\begin{align*}
+\prod_{i=1}^5 2^i &= 2^1 \times 2^2 \times 2^3 \times 2^4 \times 2^5 \\
+&= 2^{1 + 2 + 3 + 4 + 5} \\
+&= 2^{15} \\
+&= 32768. 
+\end{align*}
+\end{question}
+
+% Question 5
+\begin{question}
+What is  the result of  $\log_2 2^k 4^m$  ? 
+\begin{solution}
+The answer is \answer{$k+2m$}.
+\end{solution}
+\begin{align*}
+\log_2{2^k 4^m} &= \log_2{2^k} + \log_2{4^m} \\
+&= k \log_2{2} + m \log_2{4} \\
+&= k + 2m.
+\end{align*}
+\end{question}
+
+
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[space,numbers,twoside]{ximera}
+%% handout
+%% nohints
+%% newpage
+
+\input{preamble.tex}
+
+\let\masterdocument\document
+\let\endmasterdocument\enddocument
+\let\otherinput\input %% Numbering starts a page too soon without this
+\newcommand{\masterinput}[1]{\otherinput{#1}\clearpage} %% Numbering starts a page too soon without this
+
+\begin{masterdocument}
+
+\begin{titlepage}
+    \vspace*{1in}
+    \begin{center}
+      {\Huge \bfseries A self-evaluation for the University of
+        Leuven's Masters of Artificial Intelligence program}\\[0.5cm]
+      %{\Large AUTHOR}\\[0.4cm] 
+      This document was typeset
+      on \today.
+    \end{center}
+    %\vspace*{\fill}
+  \end{titlepage}
+\setcounter{page}{2}
+
+
+
+\makeatletter
+\newpagestyle{contents}{
+\sethead[\textsl{Contents}][][] % even
+{}{}{\textsl{Contents}} % odd
+\setfoot[\thepage][][] % even
+{}{}{\thepage} % odd
+}
+\pagestyle{contents}
+\makeatother
+
+
+\tableofcontents
+
+\renewcommand{\documentclass}{\setbox0\vbox}
+\renewcommand{\input}{\setbox0\vbox}
+\renewenvironment{document}{}{}
+
+\clearpage
+\pagestyle{main}
+
+\masterinput{./mathematics/mathematics.tex}
+\end{masterdocument}
