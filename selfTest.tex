@@ -1,8 +1,7 @@
 \documentclass{ximera}
 
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{tikz}
+\input{preamble.tex}
+
 
 \title{Self test}
 
@@ -12,15 +11,6 @@ A self-evaluation for the University of Leuven's Masters of Artificial
 Intelligence program.
 \end{abstract}
 \maketitle
-
-% using tikz for drawing graphs
-\usetikzlibrary{arrows,positioning} 
-\usetikzlibrary{arrows,shapes,backgrounds,through,shadows}
-\usetikzlibrary{decorations.pathmorphing}
-\usetikzlibrary{calc}
-\tikzstyle{ugraph}=[line width=1.5pt]
-\tikzstyle{cont}=[circle, draw,% a shading that is white at the top...
-thick,minimum size=6mm,line width=1pt,>=stealth]  % continuous  node
 
 \subsection*{Mathematics}
 
@@ -482,10 +472,13 @@ Since the lengths of two vectors are always non-negative, a negative dot product
 
 % Question 34
 \begin{question}
-Given the vectors $u$ and $v$, give a matrix $M$ that transforms them into $u'$ and $v'$; that is, find $M$ such that $M u=u'$ and $M v=v'$.
+Given the vectors $u$ and $v$, give a matrix $M$ that transforms them
+into $u'$ and $v'$; that is, find $M$ such that $M u=u'$ and $M v=v'$.
 % TODO (Behrouz) the vectors in this image should be transposed
 % TODO (Behrouz) use pgfplots instead of including an image
+\begin{image}
 \includegraphics[width=0.6\textwidth]{fig.pdf}
+\end{image}
 \end{question}
 
 
@@ -496,7 +489,7 @@ Given the vectors $u$ and $v$, give a matrix $M$ that transforms them into $u'$ 
 A clique is  a fully connected subset of nodes in a graph. 
 A maximal clique is a clique which is not a subset of a larger clique.
 Consider now the graph below, where the $X_i$ are the nodes.  What are the maximal cliques? 
-\begin{center}
+\begin{image}
 \scalebox{0.75}{
 \hskip1.4cm
 \begin{tikzpicture}[ugraph]
@@ -510,7 +503,7 @@ Consider now the graph below, where the $X_i$ are the nodes.  What are the maxim
 \draw(x2) -- (x3); \draw(x2) -- (x4);
 \draw(x3) -- (x4); \draw(x2)--(x5);\draw(x3)--(x5);
 \end{tikzpicture}}
-\end{center}
+\end{image}
 
 % TODO (Behrouz) Find out how to present the solution. The natural way to do so would be to have a two-part question with the second depending on the solution of first. Is that possible to do in ximera?
 
