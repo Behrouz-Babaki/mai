@@ -172,7 +172,7 @@ Pr (\text{via C} | \text{delayed}) &= \frac{Pr(\text{delayed} | \text{via C}) Pr
 \begin{question}
 Someone has rolled two dice.  Given that the total is even, what is the probability that it is less than 9?
 \begin{solution}
-The probability of this even is equal to \answer{$\frac{7}{9}$}.
+The probability of this event is equal to \answer{$\frac{7}{9}$}.
 \end{solution}
 Rolling two dice has 36 possible outcomes. Outcomes with a total smaller than 9 are listed below. Among these outcomes, those with an even sum are specified by boldface:
 \begin{equation*}
@@ -196,10 +196,12 @@ Pr (\text{less than 9} | \text{even}) = \frac{Pr(\text{less than 9}, \text{even}
 A lottery ticket costs \$5. 
 There is no limit to the number of tickets that can be sold, and each sold ticket has a probability of 2\% of winning \$100.
 You buy three tickets, what is your expected payout?
-The expected payout of three tickets is equal to the sum of expected payout of each of three tickets. 
+
 \begin{solution}
 The answer is \answer{-9}.
 \end{solution}
+
+The expected payout of three tickets is equal to the sum of expected payout of each of three tickets. 
 \begin{equation*}
 E[X_1 + X_2 + X_3] = E[X_1] + E[X_2] + E[X_3] = 3 \times E[X]
 \end{equation*}
@@ -222,8 +224,7 @@ Solve for $x_2$ in the following system of equations:
 \end{eqnarray*}
 \vspace*{13pt}
 \begin{solution}
-The value of $x_1$: \answer{1}.
-The value of $x_2$: \answer{-1}.
+The value of $x_1$ is \answer{1} and the value of $x_2$ is \answer{-1}.
 \end{solution}
 Multiplying the first equation by 3 and the second one by 2, we'll get the following equivalent system:
 \begin{alignat*}{2}
@@ -321,7 +322,7 @@ For an array of length $n$, the number of iterations of inner loop starts with v
 
 % Question 21
 \begin{question}
-What is the maximal number of leaves a sorted binary tree with depth $4$ can possess?
+What is the maximal number of leaves that a sorted binary tree with depth $4$ can possess?
 \begin{solution}
 The answer is \answer{$16$}.
 \end{solution}
@@ -388,7 +389,7 @@ By assigning value \answer{true} to \emph{A} and \answer{false} to \emph{B} and 
 % TODO (Behrouz) check to see if it is possible to put it as some sort of multiple-choice question
 Which of the following statements are always true (AT), which are always false (AF), and which may be true or false depending on the sets (TF) ?
 \begin{solution}
-$(C \setminus A) \setminus B = C \setminus (A \cup B)$ is \answer {AT}.
+$(C \setminus A) \setminus B = C \setminus (A \cup B)$ is \answer {AT}. \ \\
 $ C \setminus (A \cup B) = (C \setminus A)  \cap (C \setminus B)$ is \answer {AT}.
 \end{solution}
 \end{question}
@@ -401,9 +402,7 @@ the set of all flying animals. Which of the following statements are correct?
 \begin{multiple-choice}
 \choice[correct]{$B\cap F$ is the set of all birds that can fly.}
 \choice[correct]{$B\setminus F$ is the set of all birds that do not fly.}
-\choice[correct]{$F\subseteq A$.}
 \choice{$F\subseteq B$.}
-\choice[correct]{$B\subseteq A$.}
 \end{multiple-choice}
 \end{solution}
 \end{question}
@@ -412,7 +411,7 @@ the set of all flying animals. Which of the following statements are correct?
 \begin{question}
 Simplify $(A \cap B) \cup (A \cap B^C)$ where $B^C$ is the complement of $B$.
 \begin{solution}
-The answer is \answer{A}.
+The answer is \answer{A}. \\
 $(A \cap B) \cup (A \cap B^C) = A \cap (B \cup B^C) = A \cap \mathbb{U} = A$
 \end{solution}
 \end{question}
@@ -424,7 +423,9 @@ the following number of students in the indicated subjects :
 329 in Algebra, 186 in Physics, 295 in Statistics, 83 taking Algebra and Physics, 217 Algebra and Statistics, and 63 Physics and Statistics.
 How many students took all three subjects ? 
 \begin{solution}
-The answer is \answer{$53$}.
+The answer is \answer{$53$}. 
+\end{solution}
+
 Let us denote the set of students taking courses Algebra, Physics, and Statistics by letters $A$, $P$, and $S$, respectively. We have this information about cardinality of these three sets:
 
 \begin{equation*}
@@ -440,7 +441,6 @@ According to the principle of inclusion-exclusion, for three sets A, P and S we 
 |A \cup P \cup S| &= |A| + |P| + |S| - |A \cap P| - |A \cap S| - |P \cap S| + |A \cap P \cap S|\\
 |A \cap P \cap S| &= 500 - 329 - 186 - 295 + 83 + 217 + 63 = 53
 \end{align*}
-\end{solution}
 \end{question}
 
 \subsection*{Calculus}
@@ -449,16 +449,19 @@ According to the principle of inclusion-exclusion, for three sets A, P and S we 
 \begin{question}
 If $\frac{df}{dx}$ is the derivative of $f$, what is the value of $\frac{df}{dx}(4)$ assuming that 
 $f(x) = 5x^2 +3x$ 
+
 \begin{solution}
 $\frac{df}{dx}(4)$ is equal to \answer{$43$}.
-$f(x) = 5x^2 + 3x \Rightarrow f'(x) = 10 x + 3 \Rightarrow f'(4) = 43$
 \end{solution}
+
+$f(x) = 5x^2 + 3x \Rightarrow f'(x) = 10 x + 3 \Rightarrow f'(4) = 43$
 \end{question}
 
 % Question 31
 \begin{question}
 What is the value of $f(5) $ assuming that $f(x) = \int_1^x 3t ~dt$?
 \begin{solution}
+The answer is \answer{$36$}.
 \end{solution}
 $f(5) = \int_1^5 3t dt = \left. \frac{3t^2}{2} \right|_1^5 = \frac{72}{2} = 36$
 \end{question}
@@ -473,8 +476,8 @@ True or false?  When the dot product of two vectors is negative, the angle betwe
 \choice[correct] {true}
 \choice {false}
 \end{multiple-choice}
-Since the lengths of two vectors are always non-negative, a negative dot product indicates an angle with negative cosine. The range of angles with a negative cosine are those between 90 and 270 degrees.
 \end{solution}
+Since the lengths of two vectors are always non-negative, a negative dot product indicates an angle with negative cosine. The range of angles with a negative cosine are those between 90 and 270 degrees.
 \end{question}
 
 % Question 34
@@ -514,7 +517,7 @@ Consider now the graph below, where the $X_i$ are the nodes.  What are the maxim
 % TODO (Behrouz) The solution is an unordered set. Could that be specified in ximera?
 
 \begin{solution}
-The cliques are \answer {($X_1$,$X_2$,$X_3$,$X_4$) and ($X_2$,$X_3$,$X_4$)}.
+The cliques are \answer {($X_1$,$X_2$,$X_3$,$X_4$) and ($X_2$,$X_3$,$X_5$)}.
 \end{solution}
 \end{question}
 
@@ -530,7 +533,11 @@ The quantifier $^*$ denotes that the previous element may be repeated zero or mo
 Does the set $d (a \mid bc)^*t  $ include $dat$, $daaaaat$, $dbcabct$ ?  
 
 \begin{solution}
-The answser is \answer{yes}.
+\begin{multiple-choice}
+\choice[correct] {yes}
+\choice {no}
+\end{multiple-choice}
+\end{solution}
  
 All three strings match the given expression:
 \begin{align*}
@@ -538,7 +545,6 @@ All three strings match the given expression:
 &d \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, t\\
 &d \, \underline{bc} \, \underline{a} \, \underline{bc} \, t
 \end{align*}
-\end{solution}
 
 How would you define the set of all binary representations of natural numbers (i.e., 0, 1, 10, 11, ... ) ?
 
