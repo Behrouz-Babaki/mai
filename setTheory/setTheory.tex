@@ -1,0 +1,81 @@
+\documentclass{ximera}
+
+\title{Set Theory}
+
+\begin{document}
+\begin{abstract}
+The set theory portion of the self-evlaution test for the
+University of Leuven's Masters of Artificial Intelligence program.
+\end{abstract}
+\maketitle
+
+% Question 26
+\begin{question}
+% TODO (Behrouz) check to see if it is possible to put it as some sort of multiple-choice question
+Which of the following statements are always true (AT), which are
+always false (AF), and which may be true or false depending on the
+sets (TF) ?
+\begin{solution}
+$(C \setminus A) \setminus B = C \setminus (A \cup B)$ is \answer{AT}.
+\end{solution}
+\begin{solution}
+$C \setminus (A \cup B) = (C \setminus A) \cap (C\setminus B)$ is \answer{AT}.
+\end{solution}
+\end{question}
+
+% Question 27
+\begin{question}
+Let $A$ be the set of all animals, $B$ the set of all birds, and $F$
+the set of all flying animals. Which of the following statements are correct?
+\begin{solution}
+\begin{multiple-choice}
+\choice[correct]{$B\cap F$ is the set of all birds that can fly.}
+\choice[correct]{$B\setminus F$ is the set of all birds that do not fly.}
+\choice{$F\subseteq B$.}
+\end{multiple-choice}
+\end{solution}
+\end{question}
+
+% Question 28
+\begin{question}
+Simplify $(A \cap B) \cup (A \cap B^C)$ where $B^C$ is the complement of $B$.
+\begin{solution}
+The answer is \answer{A}.
+\end{solution}
+$(A \cap B) \cup (A \cap B^C) = A \cap (B \cup B^C) = A \cap \mathbb{U} = A$
+\end{question}
+
+% Question 29
+\begin{question}
+A survey of 500 students taking one or more courses in algebra,
+physics and statistics during one semester revealed the following
+number of students in the indicated subjects : 329 in Algebra, 186 in
+Physics, 295 in Statistics, 83 taking Algebra and Physics, 217 Algebra
+and Statistics, and 63 Physics and Statistics.  How many students took
+all three subjects ?
+\begin{solution}
+The answer is \answer{53}. 
+\end{solution}
+
+Let us denote the set of students taking courses Algebra, Physics, and
+Statistics by letters $A$, $P$, and $S$, respectively. We have this
+information about cardinality of these three sets:
+
+\begin{equation*}
+	\begin{array}{lll}
+	 |A| = 329							& |P| = 186				& |S| = 295 \\
+	 |A \cap P| = 83				& |A \cap S| = 217	& |P \cap S| = 63 \\
+	 |A \cup P \cup S| = 500	& &
+	\end{array}
+\end{equation*}
+
+According to the principle of inclusion-exclusion, for three sets A, P and S we have:
+\begin{align*}
+|A \cup P \cup S| &= |A| + |P| + |S| - |A \cap P| - |A \cap S| - |P \cap S| + |A \cap P \cap S|\\
+|A \cap P \cap S| &= 500 - 329 - 186 - 295 + 83 + 217 + 63 = 53
+\end{align*}
+\end{question}
+
+
+
+\end{document}

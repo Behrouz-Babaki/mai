@@ -1,0 +1,69 @@
+\documentclass{ximera}
+
+\title{Combinatorics}
+
+\begin{document}
+\begin{abstract}
+The combinatorics portion of the self-evlaution test for the
+University of Leuven's Masters of Artificial Intelligence program.
+\end{abstract}
+\maketitle
+
+
+
+% Question 6
+\begin{question}
+In a group of 15 people, everyone shakes hands with everyone else.
+How many handshakes are there?
+\begin{solution}
+The answer is \answer{105}.
+\end{solution}
+Every handshake requires two individuals. So the total number of
+handshakes is equal to the number of ways that we could pick 2
+individuals from a group of 15:
+\[
+\binom{15}{2} = \frac{15!}{(15 - 2)! \cdot 2!} = 105
+\]
+\end{question}
+
+% Question 7
+\begin{question}
+A Web search query returns ten answers. How many possible ways are
+there to rank these ten answers?
+\begin{solution}
+There are \answer{3628800} ways to rank the answers.
+\end{solution}
+The possible ways to rank these ten answers are equal to the number of
+permutations of 10 objects, which is $10! = 3628800$.
+\end{question}
+
+% Question 8
+\begin{question}
+How many subsets are there of $\{1, ... , 100\}$ that do not contain
+an even number ?
+\begin{solution}
+There are \answer{$2^{50}$} subsets.
+\end{solution}
+Each subset of $\{1 , \ldots , 100\}$ which does not contain an even
+number is a subset of $\{1, 3, 5, \ldots , 97, 99\}$. So it would
+suffice to count the number of subsets of $\{1, 3, 5, \ldots , 97,
+99\}$. We know that a set containing $n$ elements has $2^n$ subsets
+(including the empty subset). So the answer is $2^{50}$.
+\end{question}
+
+% Question 9
+\begin{question}
+10 toys are in a box.  A child can choose 3 of them.  How many
+different choices can it make (disregarding the order in which it
+chooses the toys)?
+\begin{solution}
+There are \answer{120} choices.
+\end{solution}
+The order is not important, hence the answer is
+\[
+\binom{10}{3} = \frac{10!}{(10-3)! \cdot 3!} = 120
+\]
+\end{question}
+
+
+\end{document}

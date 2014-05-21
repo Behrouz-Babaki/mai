@@ -1,0 +1,59 @@
+\documentclass{ximera}
+
+\title{Boolean Logic}
+
+\begin{document}
+\begin{abstract}
+The Boolean logic portion of the self-evlaution test for the
+University of Leuven's Masters of Artificial Intelligence program.
+\end{abstract}
+\maketitle
+
+
+% Question 23
+\begin{question}
+Which of the following statements are correct?
+\begin{solution}
+\begin{multiple-choice}
+\choice[correct]{not(A and B) is true whenever A is false or B is false}
+\choice[correct]{not (A or B) is true if and only if (not A and not B) is true}
+\choice{not (A or B) is true if and only if  (not A or not B) is true}
+\choice[correct]{not (A and B) is true whenever A is false}
+\end{multiple-choice}
+\end{solution}
+\end{question}
+
+% Question 24
+\begin{question}
+Simplify the following boolean expression: \\
+(A and B) or (A and B and C) or (A and B and C) or (A and B and C and D) or (A and B and C and D).
+\begin{solution}
+% TODO (Behrouz) There should be a better way of doing this
+% The answer is \answer{A and B}. 
+\begin{multiple-choice}
+\choice[correct]{A and B}
+\choice{A or B}
+\choice{(not A) or B}
+\choice{A or (not B)}
+\choice{(not A) and B}
+\choice{A and (not B)}
+\choice{A implies B}
+\choice{B implies A}
+\end{multiple-choice}
+\end{solution}
+\end{question}
+
+% Question 25
+\begin{question}
+Is the following boolean expression satisfiable, i.e., is there an
+assignment to the variables $A$ and $B$ so that the following
+expression evaluates to true?  \\ \\ A or (not A and B) or (not A and
+not B and C)\\ \\ If so, state one.
+\begin{solution}
+% TODO (Behrouz) This way of presenting the answer reveals the answer to the first part. Fix it!
+% TODO (Behrouz) This is not a correct specification of solution; as any assignment to B and C would be also valid. Is there a way to specify more than one correct answer?
+By assigning value \answer{true} to \emph{A} and \answer{false} to \emph{B} and \answer{false} to \emph{C}, the equation evaluates to true.
+\end{solution}
+\end{question}
+
+\end{document}

@@ -1,0 +1,14 @@
+---
+name: Masters of Artifical Intelligence Self-Test
+description: A self-evaluation for the University of Leuven’s Masters of Artificial Intelligence program.
+---
+mathematics/mathematics
+combinatorics/combinatorics
+probability/probability
+algebra/algebra
+algorithms/algorithms
+booleanLogic/booleanLogic
+setTheory/setTheory
+calculus/calculus
+linearAlgebra/linearAlgebra
+insight/insight
