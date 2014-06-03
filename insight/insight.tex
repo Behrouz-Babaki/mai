@@ -16,8 +16,6 @@ A clique is  a fully connected subset of nodes in a graph.
 A maximal clique is a clique which is not a subset of a larger clique.
 Consider now the graph below, where the $X_i$ are the nodes.  What are the maximal cliques? 
 \begin{image}
-\scalebox{0.75}{
-\hskip1.4cm
 \begin{tikzpicture}[ugraph]
 %\node[font=\Large] at (1.2,2.8) {Undirected Graph};
 \node[cont] (x1) at (0,2) {$X_1$};
@@ -28,14 +26,14 @@ Consider now the graph below, where the $X_i$ are the nodes.  What are the maxim
 \draw(x1) -- (x2);\draw(x1) -- (x3); \draw(x1) -- (x4);
 \draw(x2) -- (x3); \draw(x2) -- (x4);
 \draw(x3) -- (x4); \draw(x2)--(x5);\draw(x3)--(x5);
-\end{tikzpicture}}
+\end{tikzpicture}
 \end{image}
 
 % TODO (Behrouz) Find out how to present the solution. The natural way to do so would be to have a two-part question with the second depending on the solution of first. Is that possible to do in ximera?
 
 % TODO (Behrouz) The solution is an unordered set. Could that be specified in ximera?
 
-\begin{solution}
+\begin{solution}%% Make multiple choice
 The cliques are \answer {($X_1$,$X_2$,$X_3$,$X_4$) and ($X_2$,$X_3$,$X_5$)}.
 \end{solution}
 \end{question}
@@ -67,7 +65,7 @@ All three strings match the given expression:
 
 How would you define the set of all binary representations of natural numbers (i.e., 0, 1, 10, 11, ... ) ?
 
-\begin{solution}
+\begin{solution}%% Make multiple choice
 The answer is \answer{$0 | (1(0|1)*)$}.
 \end{solution}
 \end{question}

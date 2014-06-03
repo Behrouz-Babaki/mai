@@ -6,7 +6,7 @@
 
 \begin{document}
 \begin{abstract}
-The algebra portion of the self-evlaution test for the University
+The algorithms portion of the self-evlaution test for the University
 of Leuven's Masters of Artificial Intelligence program.
 \end{abstract}
 \maketitle
@@ -14,9 +14,8 @@ of Leuven's Masters of Artificial Intelligence program.
 % Question 19
 % TODO (Behrouz) Verify if this is the right way of putting multiple-section questions
 \begin{question}
-Consider the algorithm below.
-\begin{algorithm}
-\caption{Function(Array $A$)}
+Consider the algorithm below for: 
+\begin{algorithm}%[Function(Array $A$)]
 \begin{algorithmic}
   \FOR{$i = 1$ to $A$.length}
   \FOR{$j = 1$ to $A$.length--i}
@@ -32,14 +31,14 @@ Consider the algorithm below.
 \end{algorithm}
 
 % part 1 of question
-If the algorithm is invoked on the array $[ 5~~ 7~~ 3~~ 9]$ what is the output of the algorithm?
+If the algorithm is invoked on the array $[ 5\quad 7\quad 3\quad 9]$ what is the output of the algorithm?
 \begin{solution}
 % TODO (Behrouz) Change this into a row vector with constant #columns
 The output is 
 \begin{matrix-answer}[name=M]
     correctMatrix = [['3','5','7','9']]
 \end{matrix-answer}
-\answer{$ [3 \quad 5 \quad 7 \quad 9] $}.
+$ [3 \quad 5 \quad 7 \quad 9] $
 \end{solution}
 
 % part 2 of question
