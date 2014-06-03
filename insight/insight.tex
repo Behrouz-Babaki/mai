@@ -16,13 +16,13 @@ A clique is  a fully connected subset of nodes in a graph.
 A maximal clique is a clique which is not a subset of a larger clique.
 Consider now the graph below, where the $X_i$ are the nodes.  What are the maximal cliques? 
 \begin{image}
-\begin{tikzpicture}[ugraph]
+\begin{tikzpicture}[line width=1.5pt,circle, draw,thick,minimum size=6mm,line width=1pt,>=stealth]
 %\node[font=\Large] at (1.2,2.8) {Undirected Graph};
-\node[cont] (x1) at (0,2) {$X_1$};
-\node[cont] (x2) at (2,2) {$X_2$};
-\node[cont] (x3) at (2,0) {$X_3$};
-\node[cont] (x4) at (0,0) {$X_4$};
-\node[cont] (x5) at (3,1) {$X_5$};
+\node[circle, draw,thick,minimum size=6mm,line width=1pt,>=stealth] (x1) at (0,2) {$X_1$};
+\node[circle, draw,thick,minimum size=6mm,line width=1pt,>=stealth] (x2) at (2,2) {$X_2$};
+\node[circle, draw,thick,minimum size=6mm,line width=1pt,>=stealth] (x3) at (2,0) {$X_3$};
+\node[circle, draw,thick,minimum size=6mm,line width=1pt,>=stealth] (x4) at (0,0) {$X_4$};
+\node[circle, draw,thick,minimum size=6mm,line width=1pt,>=stealth] (x5) at (3,1) {$X_5$};
 \draw(x1) -- (x2);\draw(x1) -- (x3); \draw(x1) -- (x4);
 \draw(x2) -- (x3); \draw(x2) -- (x4);
 \draw(x3) -- (x4); \draw(x2)--(x5);\draw(x3)--(x5);
