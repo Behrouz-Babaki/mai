@@ -12,7 +12,7 @@ of Leuven's Masters of Artificial Intelligence program.
 \maketitle
 
 % Question 19
-% TODO (Behrouz) Verify if this is the right way of putting multiple-section questions
+% TODO (Behrouz) fix the algrithm so that it is shown in the webpage correctly
 \begin{question}
 Consider the algorithm below for: 
 \begin{algorithm}%[Function(Array $A$)]
@@ -33,13 +33,14 @@ Consider the algorithm below for:
 % part 1 of question
 If the algorithm is invoked on the array $[ 5\quad 7\quad 3\quad 9]$ what is the output of the algorithm?
 \begin{solution}
-% TODO (Behrouz) Change this into a row vector with constant #columns
 The output is 
 \begin{matrix-answer}[name=M]
     correctMatrix = [['3','5','7','9']]
 \end{matrix-answer}
-$ [3 \quad 5 \quad 7 \quad 9] $
 \end{solution}
+
+The output is:
+$ [3 \quad 5 \quad 7 \quad 9] $
 
 % part 2 of question
 What does the algorithm do? 
@@ -91,13 +92,16 @@ Order the following functions according to their growth-rate (use the theory of 
 \[
 n^7, 8n!, 5 \log_2 n,~ 3n, 2^n, ~ 7.5 n\log_2 n, ~ 6 n^2
 \]
-% TODO (Behrouz) Present the solution as a row vector 
 \begin{solution}
-Present your answer as a row vector:
+Present your answer as a row vector of numbers in the following way: The first entry of vector is the position of the first element of the original (unordered) list in the new (ordered) list, the second entry is the position of the second element of original list in the new list, and so on. The positions in a list start at 1.
+
 \begin{matrix-answer}[name=M]
-    correctMatrix = [['5\log_2^n','3n','7.5n\log_2{n}','6n^2','n^7','2^n','8n!']]
+%    correctMatrix = [['5\log_2^n','3n','7.5n\log_2{n}','6n^2','n^7','2^n','8n!']]
+     correctMatrix = [['5','7','1','2','6','3','4']]
 \end{matrix-answer}
 \end{solution}
+
+This is the list of functions ordered according to their growth-rate:
 \begin{equation*}
 5 \log_2^n \prec 3n \prec 7.5 n \log_2{n} \prec 6n^2 \prec n^7 \prec 2^n \prec 8n!
 \end{equation*}

@@ -29,12 +29,12 @@ Consider now the graph below, where the $X_i$ are the nodes.  What are the maxim
 \end{tikzpicture}
 \end{image}
 
-% TODO (Behrouz) Find out how to present the solution. The natural way to do so would be to have a two-part question with the second depending on the solution of first. Is that possible to do in ximera?
-
-% TODO (Behrouz) The solution is an unordered set. Could that be specified in ximera?
-
 \begin{solution}%% Make multiple choice
-The cliques are \answer {($X_1$,$X_2$,$X_3$,$X_4$) and ($X_2$,$X_3$,$X_5$)}.
+\begin{multiple-choice}
+\choice{$\{X_1,X_2,X_4\}$}
+\choice[correct]{$\{X_2,X_3,X_5\}$}
+\choice[correct]{$\{X_1,X_2,X_3,X_4\}$}
+\end{multiple-choice}
 \end{solution}
 \end{question}
 
@@ -47,12 +47,14 @@ Parentheses are used to define the scope and precedence of the operators (among 
 The quantifier $^*$ denotes that the previous element may be repeated zero or more times. 
  For example, $ab^*c$ includes $ac$, $abc$, $abbc$, $abbbc$, and so on.
 
-Does the set $d (a \mid bc)^*t  $ include $dat$, $daaaaat$, $dbcabct$ ?  
+Which of the following elements are included in the set $d (a \mid bc)^*t  $ ?
+Does the set  include $dat$, $daaaaat$, $dbcabct$ ?  
 
 \begin{solution}
 \begin{multiple-choice}
-\choice[correct] {yes}
-\choice {no}
+\choice[correct]{$dat$}
+\choice[correct]{$daaaaat$}
+\choice[correct]{$dbcabct$}
 \end{multiple-choice}
 \end{solution}
  
@@ -62,8 +64,11 @@ All three strings match the given expression:
 &d \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, \underline{a} \, t\\
 &d \, \underline{bc} \, \underline{a} \, \underline{bc} \, t
 \end{align*}
+\end{question}
 
-How would you define the set of all binary representations of natural numbers (i.e., 0, 1, 10, 11, ... ) ?
+% Second part of question 36
+\begin{question}
+How would you define the set of all binary representations of natural numbers (i.e., 0, 1, 10, 11, ... ) using the definitions given in previous question?
 
 \begin{solution}%% Make multiple choice
 The answer is \answer{$0 | (1(0|1)*)$}.

@@ -30,6 +30,79 @@ into $u'$ and $v'$; that is, find $M$ such that $M u=u'$ and $M v=v'$.
 \begin{image}
 \includegraphics[width=0.6\textwidth]{fig.pdf}
 \end{image}
+
+\begin{solution}
+\begin{matrix-answer}[name=M]
+    correctMatrix = [['1','-1/2'],['1','0']]
+\end{matrix-answer}
+\end{solution}
+
+Suppose that matrix $M$ contains these entries:
+\begin{center}
+\begin{equation*}
+M =
+\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22}
+\end{bmatrix}
+\end{equation*}
+\end{center}
+
+Since we have $M u^T = u'^T$:
+\begin{align*}
+&\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22}
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}
+= 
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix} \\
+\\
+& m_{11} = 1 \\
+& m_{21} = 1
+\end{align*}
+
+Also from  $M v^T = v'^T$ we have:
+\begin{align*}
+&\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22}
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}
+= 
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix} \\
+\\
+& m_{11} + 2 m_{12} = 0 \\
+& m_{21} + 2 m_{22} = 1 \\
+\\
+&m_{12} = - \frac{1}{2} \\
+&m_{22} = 0
+\end{align*}
+
+So the transformation matrix is:
+\begin{center}
+\begin{equation*}
+M =
+\begin{bmatrix}
+1 & -\frac{1}{2} \\
+1 & 0
+\end{bmatrix}
+\end{equation*}
+\end{center}
+
+
 \end{question}
 
 \end{document}
