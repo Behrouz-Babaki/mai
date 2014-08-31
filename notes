@@ -1,6 +1,0 @@
-* In question 15, is it possible for the stundents to enter a matrix as a solution?
-* Question 16 is a multiple-part question. Have I written it correctly?
-* Question 16 has a part which needs a free response. Have I written that correctly?
-* In questios 16 and 18, there are answers which consist of sorted sequences. Is there a better way of representing such answers?
-* Question 21 has many correct solutions (and it contains a (logical) "and" operator). Is there a way for evaluating the answer of student (e.g. as a logical expression) or even to have all correct solutions stored?
-* In question 30, the solutions are two sets of nodes. What is the proper way of representing this solution without revealing the number of sets to the student?
