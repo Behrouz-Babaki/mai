@@ -19,25 +19,32 @@ of Leuven's Masters of Artificial Intelligence program.
 % TODO (Behrouz) fix the algrithm so that it is shown in the webpage correctly
 \begin{question}
 Consider the algorithm below for: 
-\begin{algorithm}%[Function(Array $A$)]
-\begin{algorithmic}
-  \FOR{$i = 1$ to $A$.length}
-  \FOR{$j = 1$ to $A$.length--i}
-  \IF{$A[i+1] < A[i]$}
-  \STATE $temp = A[i]$
-  \STATE $A[i] = A[i+1]$
-  \STATE $A[i+1] = temp$
-  \ENDIF
-  \ENDFOR
-  \ENDFOR
-  \STATE output $A$
+% \begin{algorithm}%[Function(Array $A$)]
+% \begin{algorithmic}
+%   \FOR{$i = 1$ to $A$.length}
+%   \FOR{$j = 1$ to $A$.length--i}
+%   \IF{$A[i+1] < A[i]$}
+%   \STATE $temp = A[i]$
+%   \STATE $A[i] = A[i+1]$
+%   \STATE $A[i+1] = temp$
+%   \ENDIF
+%   \ENDFOR
+%   \ENDFOR
+%   \STATE output $A$
+% \end{algorithmic}
+% \end{algorithm}
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+\Procedure{ArraySum}{$A$}
+\State $sum = 0$
+\For {each integer $i$ in $A$}
+\State $sum = sum + i$
+\EndFor
+\State Return $sum$
+\EndProcedure
 \end{algorithmic}
 \end{algorithm}
-
-\begin{image}
-\includegraphics[width=0.6\textwidth]{algo.png}
-\end{image}
-
 
 % part 1 of question
 If the algorithm is invoked on the array $[ 5\quad 7\quad 3\quad 9]$ what is the output of the algorithm?
