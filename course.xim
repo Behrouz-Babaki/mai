@@ -2,6 +2,7 @@
 name: MAI Self-Test
 description: A self-evaluation test for the KU Leuven’s Master of Artificial Intelligence program.
 ---
+howTo/howTo
 basicMathematicalNotations/basicMathematicalNotations
 combinatorics/combinatorics
 probability/probability
