@@ -1,8 +1,8 @@
 ---
-name: Masters of Artifical Intelligence Self-Test
-description: A self-evaluation for the University of Leuven’s Masters of Artificial Intelligence program.
+name: MAI Self-Test
+description: A self-evaluation test for the KU Leuven’s Master of Artificial Intelligence program.
 ---
-mathematics/mathematics
+basicMathematicalNotations/basicMathematicalNotations
 combinatorics/combinatorics
 probability/probability
 algebra/algebra
