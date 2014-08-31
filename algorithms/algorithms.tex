@@ -1,9 +1,10 @@
 \documentclass{ximera}
 
-\input{../preamble.tex}
+% \input{../preamble.tex}
 
-\usepackage{algorithm}
-\usepackage{algorithmic}
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+\usepackage{algorithm2e}
 
 \title{Algorithms}
 
@@ -18,20 +19,38 @@ of Leuven's Masters of Artificial Intelligence program.
 % TODO (Behrouz) fix the algrithm so that it is shown in the webpage correctly
 \begin{question}
 Consider the algorithm below for: 
-\begin{algorithm}%[Function(Array $A$)]
-\begin{algorithmic}
-  \FOR{$i = 1$ to $A$.length}
-  \FOR{$j = 1$ to $A$.length--i}
-  \IF{$A[i+1] < A[i]$}
-  \STATE $temp = A[i]$
-  \STATE $A[i] = A[i+1]$
-  \STATE $A[i+1] = temp$
-  \ENDIF
-  \ENDFOR
-  \ENDFOR
-  \STATE output $A$
-\end{algorithmic}
+% \begin{algorithm}%[Function(Array $A$)]
+% \begin{algorithmic}
+%   \FOR{$i = 1$ to $A$.length}
+%   \FOR{$j = 1$ to $A$.length--i}
+%   \IF{$A[i+1] < A[i]$}
+%   \STATE $temp = A[i]$
+%   \STATE $A[i] = A[i+1]$
+%   \STATE $A[i+1] = temp$
+%   \ENDIF
+%   \ENDFOR
+%   \ENDFOR
+%   \STATE output $A$
+% \end{algorithmic}
+% \end{algorithm}
+
+
+\begin{algorithm}[H]
+\KwData{this text}
+\KwResult{how to write algorithm with \LaTeX2e }
+initialization\;
+\While{not at end of this document}{
+read current\;
+\eIf{understand}{
+go to next section\;
+current section becomes this one\;
+}{
+go back to the beginning of current section\;
+}
+}
+\caption{How to write algorithms}
 \end{algorithm}
+
 
 % part 1 of question
 If the algorithm is invoked on the array $[ 5\quad 7\quad 3\quad 9]$ what is the output of the algorithm?
