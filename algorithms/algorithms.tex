@@ -31,7 +31,7 @@ Consider the algorithm below for:
 % \end{algorithm}
 
 \begin{image}
-\includegraphics[width=0.45\textwidth]{algo.png}
+\includegraphics[width=0.25\textwidth]{algo.png}
 \end{image}
 
 
@@ -47,14 +47,17 @@ The output is
 The output is:
 $ [3 \quad 5 \quad 7 \quad 9] $
 
+\begin{question}
 % part 2 of question
 What does the algorithm do? 
 % TODO (Behrouz) Verify if this is a correct implementation of free-response
 \begin{free-response}
 \end{free-response}
 This algorithm sorts the input array using a technique called bubble sort.
+\end{question}
 
 % part 3 of question
+\begin{question}
 Given an array with ten elements, how many comparisons (that is, $<$)
 operations does the following piece of code perform?
 \begin{solution}
@@ -63,8 +66,10 @@ There are \answer{45} comparisons.
 The number of iterations of the inner loop starts with value 9 and
 gradually decreases to 1. So the total number of comparisons is $ 9 +
 8 + \ldots + 2 + 1 = 45$.
+\end{question}
 
 % part 4 of question
+\begin{question}
 Can you generalize your answer such that it gives an upperbound on the
 number of comparison operations for an array of length $n$?
 \begin{solution}
@@ -80,6 +85,7 @@ starts with value $n-1$ and gradually decreases to 1. So the total
 number of iterations would be $(n-1) + (n-2) + \ldots + 1 =
 \frac{n(n-1)}{2}$. This indicates that the running time of this
 algorithm is of $\Theta(n^2)$.
+\end{question}
 \end{question}
 
 % Question 21
