@@ -13,14 +13,14 @@ setTheory/setTheory
 calculus/calculus
 linearAlgebra/linearAlgebra
 insight/insight
-answers
-  answers/basicMathematicalNotations
-  answers/combinatorics
-  answers/probability
-  answers/algebra
-  answers/algorithms
-  answers/booleanLogic
-  answers/setTheory
-  answers/calculus
-  answers/linearAlgebra
-  answers/insight
+solutions
+  solutions/basicMathematicalNotations
+  solutions/combinatorics
+  solutions/probability
+  solutions/algebra
+  solutions/algorithms
+  solutions/booleanLogic
+  solutions/setTheory
+  solutions/calculus
+  solutions/linearAlgebra
+  solutions/insight
