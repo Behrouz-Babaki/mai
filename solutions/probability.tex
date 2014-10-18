@@ -5,7 +5,7 @@
 \begin{document}
 \maketitle
 
-\textbf{Question 10.} Let's show each outcome with an ordered pair (in which the first element shows the number of first ball and the second element shows the number of the second ball). All possible outcomes are listed below (The outcomes with a sum of 7 are specified with boldface):
+\textbf{Question 9.} Let's show each outcome with an ordered pair (in which the first element shows the number of first ball and the second element shows the number of the second ball). All possible outcomes are listed below (The outcomes with a sum of 7 are specified with boldface):
 \begin{equation*}
 \begin{matrix}
 (1,1) & (2,1) & (3,1) & (4,1) & (5,1) & \textbf{(6,1)} \\
@@ -18,19 +18,19 @@
 Pr (\text{sum = 7}) = \frac{N(\text{sum = 7})}{N(\text{total})} = \frac{4}{24} = \frac{1}{6}
 \end{equation*}
 
-\textbf{Question 11.} Using Bayes rule, we have:
+\textbf{Question 10.} Using Bayes rule, we have:
 \begin{align*}
 Pr (\text{box B} | \text{black}) &= \frac{Pr(\text{black} | \text{box B}) Pr(\text{box B})}{Pr(\text{black} | \text{box B}) Pr(\text{box B}) + Pr(\text{black} | \text{box A}) Pr(\text{box A})} \\
-&=\frac{(\frac{3}{6}) \times (\frac{1}{2})}{(\frac{3}{6}) \times (\frac{1}{2}) + (\frac{2}{5}) \times (\frac{1}{2})} = \frac{5}{9}
+&=\frac{(\frac{3}{6}) \times (\frac{1}{2})}{(\frac{3}{6}) \times (\frac{1}{2}) + (\frac{2}{7}) \times (\frac{1}{2})} = \frac{7}{11}
 \end{align*}
 
-\textbf{Question 12.} Using Bayes rule,
+\textbf{Question 11.} Using Bayes rule,
 \begin{align*}
 Pr (\text{via C} | \text{delayed}) &= \frac{Pr(\text{delayed} | \text{via C}) Pr(\text{via C})}{Pr(\text{delayed} | \text{via C}) Pr(\text{via C}) + Pr(\text{delayed} | \text{via D}) Pr(\text{via D})} \\
 & = \frac{(0.1)(0.3)}{(0.1)(0.3) + (0.05)(0.7)} = \frac{6}{13}
 \end{align*}
 
-\textbf{Question 13.} Rolling two dice has 36 possible outcomes. Outcomes with a total smaller than 9 are listed below. Among these outcomes, those with an even sum are specified by boldface:
+\textbf{Question 12.} Rolling two dice has 36 possible outcomes. Outcomes with a total smaller than 9 are listed below. Among these outcomes, those with an even sum are specified by boldface:
 \begin{equation*}
 \begin{matrix}
 \textbf{(1,1)} & (1,2) & \textbf{(1,3)} & (1,4) & \textbf{(1,5)} & (1,6) \\
@@ -46,14 +46,14 @@ Using Bayes rule,
 Pr (\text{less than 9} | \text{even}) = \frac{Pr(\text{less than 9}, \text{even})}{Pr(\text{even})} = \frac{(\frac{14}{36})}{(\frac{18}{36})} = \frac{7}{9}
 \end{equation*}
 
-\textbf{Question 14.} The expected payout of three tickets is equal to the sum of expected payout of each of three tickets. 
+\textbf{Question 13.} The expected payout of three tickets is equal to the sum of expected payout of each of three tickets. 
 \begin{equation*}
 E[X_1 + X_2 + X_3] = E[X_1] + E[X_2] + E[X_3] = 3 \times E[X]
 \end{equation*}
 
 \begin{equation*}
-E[X] = Pr(X = 100) \times (100) + Pr(X = -5) \times (-5) = (100)(0.02)-(5)(0.98) = -2.9
+E[X] = -5 + \left(Pr(X = 100) \times (100) + Pr(X = 0) \times (0)\right) = -5 + 0.02 \times 100 = -3
 \end{equation*}
-Hence the expected payout of three tickets would be $3 \times (-2.9) = -8.7$.
+Hence the expected payout of three tickets would be $3 \times -3 = -9$.
 
 \end{document}

@@ -5,23 +5,15 @@
 \begin{document}
 \maketitle
 
-\textbf{Question 19.} 1. The output of algorithm would be the array $ [3 \quad 5 \quad 7 \quad 9] $.
+\textbf{Question 16.} The output of algorithm would be the array $ [3 \quad 5 \quad 7 \quad 9] $.
+\textbf{Question 17.} This algorithm sorts the input array using a technique called bubble sort.
+\textbf{Question 18.}  The number of iterations of the inner loop starts with value 9 and gradually decreases to 1. So the total number of comparisons is $ 9 + 8 + \ldots + 2 + 1 = 45$.
 
-2. This algorithm sorts the input array using a technique called bubble sort.
+\textbf{Question 19.} For an array of length $n$, the number of iterations of inner loop starts with value $n-1$ and gradually decreases to 1. So the total number of iterations would be $(n-1) + (n-2) + \ldots + 1 = \frac{n(n-1)}{2}$. This indicates that the running time of this algorithm is of $\Theta(n^2)$.
 
-3. The number of iterations of the inner loop starts with value 9 and gradually decreases to 1. So the total number of comparisons is $ 9 + 8 + \ldots + 2 + 1 = 45$.
+\textbf{Question 20.} The maximal number of nodes at depth-level $d$ of a binary tree is $2^d$. So the answer to this question is $2^4 = 16$. 
 
-4. For an array of length $n$, the number of iterations of inner loop starts with value $n-1$ and gradually decreases to 1. So the total number of iterations would be $(n-1) + (n-2) + \ldots + 1 = \frac{n(n-1)}{2}$. This indicates that the running time of this algorithm is of $\Theta(n^2)$.
-
-\textbf{Question 20.} Having a sorted binary tree, we know that the following property holds:
-
-\emph{If y is a node in the left subtree of x, then y.key < x.key. If y is a node in the right subtree of x, then y.key $>$ x.key}
-
-This means that in order to 	decide whether an element occurs in the tree (i.e. searching the tree) we only have to check at most as many nodes as the number of depth levels of the tree. Hence the answer to this question is at most $m+1$ (note that the depth of root node is assumed to be zero). 
-
-\textbf{Question 21.} The maximal number of nodes at depth-level $d$ of a binary tree is $2^d$. So the answer to this question is $2^4 = 16$. 
-
-\textbf{Question 22.}
+\textbf{Question 21.}
 \begin{equation*}
 5 \log_2^n \prec 3n \prec 7.5 n \log_2^n \prec 6n^2 \prec n^7 \prec 2^n \prec 8n!
 \end{equation*}
