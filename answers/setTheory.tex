@@ -1,8 +1,40 @@
 \documentclass{ximera}
 
-\title{Answers - Set Theory}
+\title{Set Theory}
 
 \begin{document}
 \maketitle
+
+\textbf{Question 26.} \\
+1. AT \\
+2. AT \\
+3. ?
+
+\textbf{Question 27.} \\
+1. correct \\
+2. correct \\
+3. correct \\
+4. incorrect \\
+5. correct
+
+\textbf{Question 28.} 
+\begin{equation*}
+(A \cap B) \cup (A \cap B') = A \cap (B \cup B') = A \cap \mathbb{U} = A
+\end{equation*}
+
+\textbf{Question 29.}
+Let us denote the set of students taking courses Algebra, Physics, and Statistics by letters $A$, $P$, and $S$, respectively. We have this information about cardinality of these three sets:
+
+\begin{tabular}{lll}
+ $|A| = 329$ & $|P| = 186$ & $|S| = 295$ \\
+ $|A \cap P| = 83$ & $|A \cap S| = 217$ & $|P \cap S| = 63$ \\
+ $|A \cup P \cup S| = 500$ &&
+\end{tabular}
+
+According to the principle of inclusion-exclusion, for three sets A, P and S we have:
+\begin{align*}
+|A \cup P \cup S| &= |A| + |P| + |S| - |A \cap P| - |A \cap S| - |P \cap S| + |A \cap P \cap S|\\
+|A \cap P \cap S| &= 500 - 329 - 186 - 295 + 83 + 217 + 63 = 53
+\end{align*}
 
 \end{document}
